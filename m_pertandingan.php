@@ -34,14 +34,14 @@ class m_pertandingan {
         $mysqli->query("UPDATE jadwal set skor1='$this->poin1',skor2='$this->poin2' WHERE klub1 = '$this->klub1' and klub2 = '$this->klub2'");
         if($this->poin1>$this->poin2){ //JIKA POIN>POIN2, MAKA KLUB 1 MENANG
             $mysqli->query("UPDATE klub set poin = poin+3, jumlahmenang = jumlahmenang+1,jumlahgol=jumlahgol+'$this->poin1', jumlahkebobol=jumlahkebobol+'$this->poin2' where nama = '$this->klub1'");
-            $mysqli->query("UPDATE klub set jumlahkalah = jumlahkalah+1, jumlahgol=jumlahgol+'$this->poin2',jumlahkebobol = jumlahkebobol + '$this->poin1' where nama = '$this->klub2'");
+            $mysqli->query("UPDATE klub set jumlahkalah = jumlahkalah+1, jumlahgol=jumlahgol+'$this->poin2',jumlahkebobol = jumlahkebobol + '$this->poin1',selisihgol = selisihgol + ('$this->poin2'-'$this->poin1') where nama = '$this->klub2'");
         }elseif($this->poin2>$this->poin1){ //SEBALIKNYA
             $mysqli->query("UPDATE klub set poin = poin+3, jumlahmenang = jumlahmenang+1,jumlahgol=jumlahgol+'$this->poin2', jumlahkebobol=jumlahkebobol+'$this->poin1' where nama = '$this->klub2'");
-            $mysqli->query("UPDATE klub set jumlahkalah = jumlahkalah+1, jumlahgol=jumlahgol+'$this->poin1',jumlahkebobol = jumlahkebobol + '$this->poin2' where nama = '$this->klub1'");
+            $mysqli->query("UPDATE klub set jumlahkalah = jumlahkalah+1, jumlahgol=jumlahgol+'$this->poin1',jumlahkebobol = jumlahkebobol + '$this->poin2',selisihgol = selisihgol + ('$this->poin1'-'$this->poin2') where nama = '$this->klub1'");
         }
         else{ //JIKA SERI
-            $mysqli->query("UPDATE klub set poin = poin+1,jumlahseri = jumlahseri+1,jumlahgol=jumlahgol+'$this->poin1', jumlahkebobol=jumlahkebobol+'$this->poin2' where nama = '$this->klub1'");
-            $mysqli->query("UPDATE klub set poin = poin+1, jumlahseri = jumlahseri+1, jumlahgol=jumlahgol+'$this->poin2',jumlahkebobol = jumlahkebobol + '$this->poin1' where nama = '$this->klub2'");
+            $mysqli->query("UPDATE klub set poin = poin+1,jumlahseri = jumlahseri+1,jumlahgol=jumlahgol+'$this->poin1', jumlahkebobol=jumlahkebobol+'$this->poin2',selisihgol = selisihgol + ('$this->poin1'-'$this->poin2') where nama = '$this->klub1'");
+            $mysqli->query("UPDATE klub set poin = poin+1, jumlahseri = jumlahseri+1, jumlahgol=jumlahgol+'$this->poin2',jumlahkebobol = jumlahkebobol + '$this->poin1',selisihgol = selisihgol + ('$this->poin2'-'$this->poin1') where nama = '$this->klub2'");
         }
     }
     public function getPoint(){
