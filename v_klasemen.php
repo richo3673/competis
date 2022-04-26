@@ -9,7 +9,7 @@
 <div class="container3">
 
     <p class="login-text" style="font-size: 2rem; font-weight: 800;">Klasemen Liga PW</p>
-    <p class="login-text" style="font-size: 1.5rem; font-weight: 800;">Juara grup</p>
+    <p class="login-text" style="font-size: 1.5rem; font-weight: 800;">Juara grup : <?php echo $klasemen[0]["nama"]?></p>
 <table id="customers">
     <thead>
     <tr>
