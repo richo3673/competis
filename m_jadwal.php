@@ -12,6 +12,7 @@ class m_jadwal{
         $this->klub2 = $klub2;
         $this->tanggal = $tanggal;
     }
+
     public function addJadwal(){
         global $mysqli;
         $mysqli->query("INSERT INTO jadwal(klub1, klub2, tanggal) VALUES ((SELECT nama FROM klub WHERE nama = '$this->klub1'),(SELECT nama FROM klub WHERE nama = '$this->klub2'),'$this->tanggal')");

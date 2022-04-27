@@ -27,7 +27,7 @@ class m_klub {
         if (isset($this->nama)){
             $mysqli->query("INSERT INTO klub (nama, stadion,manager,poin) VALUES ('$this->nama','$this->stadion','$this->manager','$this->poin')");
         }
-        }
+    }
 
     public function getKlub(){
         global $mysqli;

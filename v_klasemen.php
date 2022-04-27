@@ -39,8 +39,8 @@
     ?>
     </tbody>
 </table>
-    <a href="main.php" class="button button1"> Home</a>
-    <a href="c_jadwal.php" class="button button1"> Lihat Jadwal</a>
+    <a href="main.php" class="button"> Home</a>
+    <a href="c_jadwal.php" class="button"> Lihat Jadwal</a>
 </div>
 </body>
 </html>

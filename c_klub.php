@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else{
             $klub->addKlub();
-            header('Location:main.php');       
+            header('Location:main.php');
         }
     }
 }

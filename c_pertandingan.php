@@ -20,7 +20,7 @@ if (isset($_POST['simpan'])) {
     $poin2 = $_POST['skor2'];
     $pertandingan = new c_pertandingan($id,$klub1, $klub2,  $poin1, $poin2);
     $pertandingan->addPoint();
-    header('Location:c_pertandingan.php');
+    echo "<script>location.href = 'c_pertandingan.php'</script>";
 }else{
     $pertandingan = new c_pertandingan(null,null,null,null,null);
     $pertandingan->getRiwayat();
