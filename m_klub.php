@@ -40,4 +40,13 @@ class m_klub {
         return $this->res;
     }
 
+    public function klubExist($name):bool{
+        global $mysqli;
+        $q = "SELECT * FROM klub WHERE nama = '$name'";
+        $rs = $mysqli->query($q);
+        if($rs->num_rows!=0){
+            return true;
+        }
+        return false;
+    }
 }
