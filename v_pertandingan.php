@@ -13,7 +13,7 @@
         </button>
         <div class="dropdown-content">
             <a href="main.php">Klub</a>
-            <a href="v_jadwal.php">Jadwal</a>
+            <a href="c_jadwal.php">Jadwal</a>
             <a href="c_klasemen.php">Klasemen</a>
         </div>
     </div>
