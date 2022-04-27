@@ -35,7 +35,7 @@
 
 <form action="c_jadwal.php" method="post" name="input">
     <h2>Tambahkan jadwal</h2>
-    Nama Klub 1: &emsp;&emsp;<select name="klub1" id="klub1">
+    Nama Klub 1: &emsp;&emsp;<select name="klub1" id="klub1" onchange="testFunc(1)">
         <option disabled selected> Pilih klub</option>
         <?php
         global $mysqli;
@@ -47,7 +47,41 @@
         }
         ?>
     </select>
-    Nama Klub 2: &emsp;&emsp;<select name="klub2" id="klub2">
+    <script>
+        function testFunc(a){
+            undisable(a);
+            var text = '';
+            var text2 = '';
+            if(a==1){
+                text = 'klub1';
+                text2 = 'klub2';
+            }
+            else{
+                text = 'klub2';
+                text2 = 'klub1';
+            }
+            var select = document.getElementById(text);
+            var value = select.selectedIndex;
+            var select2 = document.getElementById(text2);
+            var op = select2.getElementsByTagName("option");
+            op[value].disabled = true;
+        }
+
+        function undisable(a){
+            var text = '';
+            if(a==1){
+                text='klub2';
+            }
+            else{
+                text='klub1'
+            }
+            var op = document.getElementById(text).getElementsByTagName("option");
+                for (var i = 0; i < op.length; i++) {
+                    op[i].disabled = false ;
+                }
+        }
+    </script>
+    Nama Klub 2: &emsp;&emsp;<select name="klub2" id="klub2" onchange="testFunc(2)">
         <option disabled selected> Pilih klub</option>
         <?php
         global $mysqli;
@@ -59,7 +93,7 @@
             }
         ?>
     </select>
-    <p>Tanggal :&emsp;&emsp;&emsp;&emsp;<input type="text" name="tanggal" required><br></p>
+    <p>Tanggal :&emsp;&emsp;&emsp;&emsp;<input type="date" name="tanggal" required><br></p>
     <input type="submit" name="input" value="Input" class="button button2">
 </form>
 <a href="main.php" class="button button1"> Kembali</a>
