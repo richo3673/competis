@@ -7,8 +7,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stadion = $_REQUEST['stadion'];
         $manager = $_REQUEST['manager'];
         $klub = new c_klub($nama, $stadion, $manager,0);
-        $klub->addKlub();
-        header('Location:main.php');
+        if($klub->checkName($nama) == true){
+            echo "<script>alert('Nama klub sudah terdaftar')</script>";
+            echo "<script>location.href = 'main.php'</script>";
+        }
+        else{
+            $klub->addKlub();
+            header('Location:main.php');       
+        }
     }
 }
 
@@ -33,5 +39,7 @@ class c_klub{
         include "v_klub.php";
     }
 
-
+    public function checkName($name){
+        return $this->model->klubExist($name);
+    }
 }
