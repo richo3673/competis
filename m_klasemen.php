@@ -33,7 +33,7 @@ class m_klasemen
         }
         $this->res = array_filter($rows, fn($nama) => !is_null($nama) && $nama !== '');
         //SORTIR KLASEMEN $this->res
-        uasort($this->res, function ($a, $b) {
+        usort($this->res, function ($a, $b) {
             if ($a['poin'] == $b['poin'] and ($a['poin']!=0)) { //JIKA POIN A DAN B SAMA DAN TIDAK 0 (RETURN 'ELSE' DI LINE 60)
                 global $mysqli;
                 $aa = $a['nama'];
@@ -59,7 +59,6 @@ class m_klasemen
             }
             return $a['poin'] > $b['poin'] ? -1 : 1; //JIKA POIN A DAN B TIDAK SAMA, DIURUTKAN POIN YANG LEBIH BESAR
         });
-        $this->res = array_values($this->res); //EZ LOL
         return $this->res;
     }
 
