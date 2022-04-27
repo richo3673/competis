@@ -6,11 +6,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="container3">
-
+<div class="container">
+    <a href="main.php" class="back"></a>
+    <div class="dropdown2">
+        <button class="dropbtn">Menu
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="main.php">Klub</a>
+            <a href="c_jadwal.php">Jadwal</a>
+            <a href="c_pertandingan.php">Pertandingan</a>
+        </div>
+    </div>
     <p class="login-text" style="font-size: 2rem; font-weight: 800;">Klasemen Liga PW</p>
     <p class="login-text" style="font-size: 1.5rem; font-weight: 800;">Juara grup : <?php echo $klasemen[0]["nama"]?></p>
-<table id="customers">
+<table id="klasemen">
     <thead>
     <tr>
         <th>Peringkat</th>
@@ -20,7 +30,7 @@
         <th>Kalah</th>
         <th>Seri</th>
         <th>Gol Cetak</th>
-        <th>Gol Kemasukan</th>
+        <th>Gol Masuk</th>
         <th>Selisih Gol</th>
     </tr>
     </thead>
@@ -39,8 +49,7 @@
     ?>
     </tbody>
 </table>
-    <a href="main.php" class="button"> Home</a>
-    <a href="c_jadwal.php" class="button"> Lihat Jadwal</a>
+
 </div>
 </body>
 </html>
