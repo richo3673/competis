@@ -3,7 +3,8 @@
 * {
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins'
+    
 }
 
 body {
@@ -14,26 +15,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("https://media.suara.com/pictures/653x366/2014/04/27/Bola.jpg"); 
 }
 
 .container {
     display: inline-block;
     width: 600px;
     min-height: 510px;
-    background: #FFF;
+    background:#FFF;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    box-shadow: 0 0 0px rgba(0,0,0,.3);
     padding: 40px 30px;
 }
 .container2 {
     width: 600px;
     min-height: 510px;
-    background: #FFF;
+    background: linear-gradient(#9393d0, #b7e70a);
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    box-shadow: 0 0 0px rgba(0,0,0,.3);
     padding: 40px 30px;
+    align-items: center;
+    
+} 
 
-}  .container3 {
+.container2 .input-group{
+    margin-top: 90px ;
+    background-color: #e09d15;
+    border-radius: 5px;
+    background: linear-gradient(#000046, #1cb5e0);
+}
+
+
+.container2 .input-group h2{
+    color: rgb(247, 247, 247);
+    font-size: 1.6rem;
+    text-align: center;
+    justify-content: center;
+    }
+.container2 .input-group p{
+        color: #FFF;
+    }
+.container3 {
         display: inline-block;
         width: 900px;
         margin-left: 30px;
@@ -146,42 +168,58 @@ body {
     padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even){
+    background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {
+    background-color: #ddd;
+}
 
 #customers th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #ffb83d;
+    background-color: #e09d15;
     color: white;
 }
 .button {
-
-
-
-    padding: 20px;
-    text-align: center;
+    background-color: #f9004d;
+    color: white;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.4s;
 }
-.button1 {
 
-    margin: 18px 0px;
+.button:hover {
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+    color: rgb(237, 0, 0);
+}
+
+.button1 {
+    margin: 18px 30px;
     padding: 7px 12px;
 }
 .button2 {
-    border: none;
-    color: white;
-    background-color: #ffb83d;
-    padding: 4px 7px;
-    font-size: 11px;
+  
+    margin: 18px 10px;
+    padding: 7px 12px;
 }
 @media (max-width: 430px) {
     .container {
         width: 300px;
     }
+
+
+
+/* jadwal pertandingan  */
+
+.jadwal_container2{
+
+}
+
 }
