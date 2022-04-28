@@ -17,7 +17,7 @@
             <a href="c_klasemen.php">Klasemen</a>
         </div>
     </div>
-    <p class="login-text" style="font-size: 2rem; font-weight: 800;">Riwayat Pertandingan</p>
+    <p class="login-text" style="font-size: 2rem; font-weight: 800;text-align: center;">Riwayat Pertandingan</p>
     <div style="width: 55%; float:left">
         <table id="customers">
             <thead>
@@ -48,11 +48,11 @@
             </tbody>
         </table>
     </div>
-    <div style="width: 38%; float:right; margin-top:-10px">
+    <div style="width: 37%; float:right; margin-top:-10px">
         <form action="c_pertandingan.php" method="post" class="login-email">
             <div class="input-group">
                 <h2>Input skor</h2>
-                <select name="klub" id="klub" class="button">
+                <select name="klub" id="klub" class="button2">
                     <option disabled selected> Pilih pertandingan</option>
                     <?php
                     global $mysqli;

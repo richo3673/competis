@@ -20,10 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 class c_klub{
     public $model;
-
-    /**
-     * @param $model
-     */
     public function __construct($nama, $stadion, $manager,$poin)
     {
         $this->model = new  m_klub($nama, $stadion, $manager,$poin);

@@ -17,7 +17,7 @@
             <a href="c_klasemen.php">Klasemen</a>
         </div>
     </div>
-    <p class="login-text" style="font-size: 2rem; font-weight: 800;">Jadwal Pertandingan</p>
+    <p class="login-text" style="font-size: 2rem; font-weight: 800;text-align: center;">Jadwal Pertandingan</p>
     <div style="width: 55%; float:left">
         <table id="customers">
             <thead>
@@ -44,12 +44,12 @@
             </tbody>
         </table>
     </div>
-    <div style="width: 33%; float:right; margin-top:-10px">
+    <div style="width: 35%; float:right; margin-top:-10px">
         <form action="c_jadwal.php" method="post" name="input" class="login-email">
             <div class="input-group">
             <h2>Tambahkan jadwal</h2>
                 <div style="width: 50%; float:left">
-            Nama Klub 1<select name="klub1" id="klub1" onchange="testFunc(1)" class="button">
+            Nama Klub 1<select name="klub1" id="klub1" onchange="testFunc(1)" class="button2">
                 <option disabled selected> Pilih klub</option>
                 <?php
                 global $mysqli;
@@ -96,7 +96,7 @@
                 <br>
                 </div>
                 <div style="width: 40%; float:right">
-            Nama Klub 2<select name="klub2" id="klub2" onchange="testFunc(2)" class="button">
+            Nama Klub 2<select name="klub2" id="klub2" onchange="testFunc(2)" class="button2">
                 <option disabled selected> Pilih klub</option>
                 <?php
                 global $mysqli;

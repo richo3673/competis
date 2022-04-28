@@ -2,7 +2,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -17,8 +16,8 @@
             <a href="c_pertandingan.php">Pertandingan</a>
         </div>
     </div>
-    <p class="login-text" style="font-size: 2rem; font-weight: 800;">Klasemen Liga PW</p>
-    <p class="login-text" style="font-size: 1.5rem; font-weight: 800;">Juara grup : <?php echo $klasemen[0]["nama"]?></p>
+    <p class="login-text" style="font-size: 2rem; font-weight: 800;text-align: center;">Klasemen Liga PW</p>
+    <p class="login-text" style="font-size: 1.5rem; font-weight: 800;text-align: center;">Juara grup : <?php echo $klasemen[0]["nama"]?></p>
 <table id="klasemen">
     <thead>
     <tr>

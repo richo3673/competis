@@ -5,11 +5,6 @@ class m_klub {
     private $stadion;
     private $manager;
     private $poin;
-    private $jumlahmenang;
-    private $jumlahkalah;
-    private $jumlahseri;
-    private $jumlahgol;
-    private $jumlahkebobol;
     public $res = array();
 
 
