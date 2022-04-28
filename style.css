@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@font-face {
+    font-family: Gilroy;
+    src: url(Gilroy-Light.otf);
+}
 * {
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins'   
+    font-family: 'Poppins'
+    
 }
 
 body {
@@ -17,8 +21,6 @@ body {
     background-image: url("background.jpg");
 }
 
-/* for V-klub  */
-
 .container {
     width: 1100px;
     min-height: 575px;
@@ -28,60 +30,51 @@ body {
     padding: 10px 30px;
     margin-top: 30px;
 }
-
-.container .tablecon{
-    width: 55%; 
-    float: left;  
-}
-
-.container h1{
-    font-size: 1.8rem; 
-    text-align: left;
-    margin-left: 170px;
-    font-weight: 800;  
-}
-
- .container .images .ball{
-    opacity: 0.2;
-    width: 300px;
-    height: auto;
-    background-size: cover;
-    position: absolute;
-    left: 8%;
-    bottom: -100px;
-
-}
-#customers {
-    border-collapse: collapse;
-    border-radius: 1em;
+.container2 {
     width: 600px;
-    margin: 17px 0px 25px 25px;
-    background-color: rgba(255, 255, 255, 0.26);}
+    margin-left: 10px;
+    min-height: 510px;
+    background: rgba(255, 255, 255, 0.87);
+    border-radius: 25px;
+    box-shadow: 0 0 0px rgba(0,0,0,.3);
+    padding: 0px 30px;
+    align-items: center;
+    
+} 
 
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
+.container2 .input-group{
+    margin-top: 90px ;
+    border-radius: 5px;
 }
 
-#customers tr:nth-child(even){
-    background-color: rgba(175, 206, 198, 0.26);}
 
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+.container2 .input-group h2{
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
     text-align: center;
-    background-color: #3b9272;
-    color: white;
-}
+    justify-content: center;
+    }
+.container2 .input-group p{
+        color: rgb(0, 0, 0);
+    }
+.container3 {
+        display: inline-block;
+        width: 900px;
+        margin-left: 30px;
+        min-height: 510px;
+        background: rgba(255, 255, 255, 0.87);
+        border-radius: 25px;
+        box-shadow: 0 0 5px rgba(0,0,0,.3);
+        padding: 5px 30px;
+    }
 
-.container .inputan{
-    width: 33%;
-    float:right; 
-    margin-top: 30px
-}
-
-.container .inputan .input-group h2{
+.container .login-text {
+    color: #111;
+    font-weight: 500;
     text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: capitalize;
 }
 
 .container .login-email .input-group {
@@ -106,7 +99,7 @@ body {
 
 .container .login-email .input-group .btn {
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100px;
     height: 35px;
     padding: 0px 0px;
@@ -138,18 +131,107 @@ body {
 }
 
 .container .login-email .input-group .btn:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px);
     background: #6c5ce7;
 }
 
-/* .container .login-text {
+.login-register-text {
     color: #111;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.login-register-text a {
+    text-decoration: none;
+    color: #6c5ce7;
+}
+
+table {
+    border-radius: 25px;
+    overflow: hidden;
     text-align: center;
-    margin-bottom: 20px;
-    display: block;
-    text-transform: capitalize;
-} */
+}
+#customers {
+    border-collapse: collapse;
+    border-radius: 1em;
+    width: 600px;
+    margin: 17px 0px 25px 25px;
+    background-color: rgba(255, 255, 255, 0.26);}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){
+    background-color: rgba(175, 206, 198, 0.26);}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #3b9272;
+    color: white;
+}
+#klasemen {
+    border-collapse: collapse;
+    border-radius: 1em;
+    width: 1000px;
+    margin: 17px 0px 25px 25px;
+    background-color: rgba(255, 255, 255, 0.26);}
+
+#klasemen td, #klasemen th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#klasemen tr:nth-child(even){
+    background-color: rgba(175, 206, 198, 0.26);}
+
+#klasemen th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #3b9272;
+    color: white;
+}
+.button {
+    background-color: #3b9272;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 7px 12px;
+    border-radius: 30px;
+    transition: 0.4s;
+
+    }
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid #3b9272;
+    cursor: pointer;
+    color: rgb(59, 146, 114);
+    padding: 7px 12px;
+}
+
+.button2 {
+    margin: 18px 10px;
+    padding: 7px 12px;
+}
+
+.back {
+    border-radius: 20px;
+    width: 65px;
+    height: 40px;
+    margin: 28px 0px  0px 25px;
+    float: left;
+    overflow: hidden;
+    background-color: rgb(59, 146, 114);
+    background-image: url("arrow.png");
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
 
 .dropdown {
     border-radius: 20px;
@@ -173,9 +255,33 @@ body {
     padding: 7px 20px;
     background-color: inherit;
     margin: 0;
-    cursor: pointer;
 }
+.dropdown2 {
+    border-radius: 20px;
+    width: 90px;
+    height: 40px;
+    font-weight: bold;
+    margin: 28px 0px  0px 0px;
+    float: right;
+    background-color: #3b9272;
+    overflow: hidden;
+}
+.dropdown2 .dropbtn {
+    border-radius: 20px;
+    font-size: 1.1rem;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    color: white;
+    padding: 7px 20px;
+    background-color: inherit;
+    margin: 0;
+}
+/* Add a red background color to navbar links on hover */
 
+
+
+/* Dropdown content (hidden by default) */
 .dropdown-content {
     border-radius: 20px;
     display: none;
@@ -198,215 +304,13 @@ body {
     background-color: #ddd;
 }
 
+/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-/* For klasemen  */
-
-#klasemen {
-    border-collapse: collapse;
-    border-radius: 1em;
-    width: 800px;
-    margin: 17px 0px 25px 25px;
-    background-color: rgba(255, 255, 255, 0.26);}
-
-#klasemen td, #klasemen th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#klasemen tr:nth-child(even){
-    background-color: rgba(175, 206, 198, 0.26);}
-
-#klasemen th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #3b9272;
-    color: white;
-}
-
-.container3 {
-    display: inline-block;
-    width: 900px;
-    margin-left: 30px;
-    min-height: 510px;
-    background: rgba(255, 255, 255, 0.87);
-    border-radius: 25px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
-    padding: 5px 30px;
-}
-
-.button {
-    background-color: #3b9272;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 7px 12px;
-    border-radius: 30px;
-    transition: 0.4s;
-    margin-left: 10px;
-}
-
-
-.button1 {
-    background-color: #6c5ce7;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 7px 12px;
-    border-radius: 30px;
-    transition: 0.4s;
-    position: absolute;
-    top: 150px;
-    left :1100px;
-}
-
-.button:hover {
-    background-color: transparent;
-    border: 2px solid #3b9272;
-    cursor: pointer;
-    color: rgb(59, 146, 114);
-    padding: 7px 12px;
-}
-
-.button1:hover {
-    background-color: transparent;
-    border: 2px solid #6c5ce7;
-    cursor: pointer;
-    color: #6c5ce7;
-    padding: 7px 12px;
-}
-
-.container3 h1{
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    margin-top: 30px;
-}
-
-
-.container3 h2{
-    font-size: rem;
-     font-weight: 800;
-     text-transform: uppercase;
-     margin-left: 20px;
-}
-
-
-.container3 .images .ball{
-    opacity: 0.2;
-    width: 300px;
-    height: auto;
-    background-size: cover;
-    position: absolute;
-    left: 74%;
-    bottom: -110px;
-}
-
-
-.container2 {
-    width: 600px;
-    margin-left: 10px;
-    min-height: 510px;
-    background: rgba(255, 255, 255, 0.87);
-    border-radius: 25px;
-    box-shadow: 0 0 0px rgba(0,0,0,.3);
-    padding: 0px 30px;
-    align-items: center;
-    
-} 
-
-.container2 .input-group{
-    margin-top: 90px ;
-    border-radius: 5px;
-}
-
-.container2 .input-group h2{
-    color: rgb(0, 0, 0);
-    font-size: 1.6rem;
-    text-align: center;
-    justify-content: center;
-    }
-
-.container2 .input-group p{
-        color: rgb(0, 0, 0);
-    }
-
-
-
-.login-register-text {
-    color: #111;
-    font-weight: 600;
-}
-
-.login-register-text a {
-    text-decoration: none;
-    color: #6c5ce7;
-}
-
-
-
-table {
-    border-radius: 25px;
-    overflow: hidden;
-    text-align: center;
-}
-
-
-
-.button2 {
-    margin: 18px 10px;
-    padding: 7px 12px;
-}
-
-.back {
-    border-radius: 20px;
-    width: 65px;
-    height: 40px;
-    margin: 28px 0px  0px 25px;
-    float: left;
-    overflow: hidden;
-    background-color: rgb(59, 146, 114);
-    background-image: url("arrow.png");
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    }
-
-
-/* dropdown for jadwal and pertandingan  */
-
-.dropdown2 {
-    border-radius: 20px;
-    width: 90px;
-    height: 40px;
-    font-weight: bold;
-    margin: 28px 0px  0px 0px;
-    float: right;
-    overflow: hidden;
-    background-color: #3b9272;
-    overflow: hidden;
-}
-.dropdown2 .dropbtn {
-    border-radius: 20px;
-    font-size: 1.1rem;
-    border: none;
-    font-weight: bold;
-    outline: none;
-    color: white;
-    padding: 7px 20px;
-    background-color: inherit;
-    margin: 0;
-}
-
 .dropdown2:hover .dropdown-content {
     display: block;
 }
-
 @media (max-width: 430px) {
     .container {
         width: 300px;

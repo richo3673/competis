@@ -17,7 +17,7 @@
             <a href="c_klasemen.php">Klasemen</a>
         </div>
     </div>
-    <p class="login-text" style="font-size: 2rem; font-weight: 800; text-align: center;">Jadwal Pertandingan</p>
+    <p class="login-text" style="font-size: 2rem; font-weight: 800;">Jadwal Pertandingan</p>
     <div style="width: 55%; float:left">
         <table id="customers">
             <thead>

@@ -17,8 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $jadwal->getJadwal();
 }
 
-
-
 class c_jadwal{
     public $model;
 
