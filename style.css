@@ -17,6 +17,13 @@ body {
     background-image: url("background.jpg");
 }
 
+
+table {
+    border-radius: 25px;
+    overflow: hidden;
+    text-align: center;
+}
+
 /* for V-klub  */
 
 .container {
@@ -51,22 +58,22 @@ body {
     bottom: -100px;
 
 }
-#customers {
+    #klub {
     border-collapse: collapse;
     border-radius: 1em;
     width: 600px;
     margin: 17px 0px 25px 25px;
     background-color: rgba(255, 255, 255, 0.26);}
 
-#customers td, #customers th {
+    #klub td, #klub th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#customers tr:nth-child(even){
+    #klub tr:nth-child(even){
     background-color: rgba(175, 206, 198, 0.26);}
 
-#customers th {
+    #klub th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
@@ -141,15 +148,6 @@ body {
     transform: scale(1.1);
     background: #6c5ce7;
 }
-
-/* .container .login-text {
-    color: #111;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 20px;
-    display: block;
-    text-transform: capitalize;
-} */
 
 .dropdown {
     border-radius: 20px;
@@ -250,7 +248,6 @@ body {
     margin-left: 10px;
 }
 
-
 .button1 {
     background-color: #6c5ce7;
     color: white;
@@ -308,55 +305,13 @@ body {
 }
 
 
-.container2 {
-    width: 600px;
-    margin-left: 10px;
-    min-height: 510px;
-    background: rgba(255, 255, 255, 0.87);
-    border-radius: 25px;
-    box-shadow: 0 0 0px rgba(0,0,0,.3);
-    padding: 0px 30px;
-    align-items: center;
-    
-} 
+/* FOR JADWAL  */
 
-.container2 .input-group{
-    margin-top: 90px ;
-    border-radius: 5px;
-}
-
-.container2 .input-group h2{
-    color: rgb(0, 0, 0);
-    font-size: 1.6rem;
-    text-align: center;
-    justify-content: center;
-    }
-
-.container2 .input-group p{
-        color: rgb(0, 0, 0);
-    }
-
-
-
-.login-register-text {
-    color: #111;
-    font-weight: 600;
-}
-
-.login-register-text a {
-    text-decoration: none;
-    color: #6c5ce7;
-}
-
-
-
-table {
-    border-radius: 25px;
-    overflow: hidden;
+.container .jadwal{
+    font-size: 2rem; 
+    font-weight: 800;
     text-align: center;
 }
-
-
 
 .button2 {
     background-color: #3b9272;
@@ -383,6 +338,20 @@ table {
     background-position: center;
     background-repeat: no-repeat;
     }
+/* =
+for klasemen  */
+
+.container .text1 {
+    font-size: 2rem; 
+    font-weight: 800;
+    text-align: center;
+}
+
+.container .text {
+    font-size: 1.5rem; 
+    font-weight: 800;
+    text-align: center;
+}
 
 
 /* dropdown for jadwal and pertandingan  */

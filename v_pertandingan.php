@@ -19,7 +19,7 @@
     </div>
     <p class="login-text" style="font-size: 2rem; font-weight: 800;text-align: center;">Riwayat Pertandingan</p>
     <div style="width: 55%; float:left">
-        <table id="customers">
+        <table id="klub">
             <thead>
             <tr>
                 <th>Klub 1</th>

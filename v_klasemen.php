@@ -6,6 +6,9 @@
 </head>
 <body>
 <div class="container">
+        <div class="images">
+			<img src="1.png" class = "ball">
+		</div>
     <a href="main.php" class="back"></a>
     <div class="dropdown2">
         <button class="dropbtn">Menu
@@ -16,8 +19,8 @@
             <a href="c_pertandingan.php">Pertandingan</a>
         </div>
     </div>
-    <p class="login-text" style="font-size: 2rem; font-weight: 800;text-align: center;">Klasemen Liga PW</p>
-    <p class="login-text" style="font-size: 1.5rem; font-weight: 800;text-align: center;">Juara grup : <?php echo $klasemen[0]["nama"]?></p>
+    <p class="text1" >Klasemen Liga PW</p>
+    <p class="text">Juara grup : <?php echo $klasemen[0]["nama"]?></p>
 <table id="klasemen">
     <thead>
     <tr>

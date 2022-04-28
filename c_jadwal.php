@@ -8,15 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $tanggal = $_REQUEST['tanggal'];
         $jadwal = new c_jadwal($klub1, $klub2,$tanggal);
         $jadwal->addJadwal();
-        //header('Location:c_jadwal.php');
     }else{
         header('Location:c_jadwal.php');
     }
+    
 }else{
     $jadwal  = new c_jadwal(null,null,null,null);
     $jadwal->getJadwal();
 }
-
 
 
 class c_jadwal{
@@ -28,8 +27,6 @@ class c_jadwal{
 
     public function addJadwal(){
         $jadwal = $this->model->addJadwal();
-        $jadwal = $this->model->getJadwal();
-        //include "v_jadwal.php";
         header('Location:c_jadwal.php');
     }
     public function getJadwal(){

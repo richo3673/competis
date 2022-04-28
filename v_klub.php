@@ -22,7 +22,7 @@
         </div>
     <h1>DAFTAR KLUB LIGA PW</h1>
     <div class="tablecon">
-    <table id="customers">
+    <table id="klub">
         <thead>
         <tr>
             <th>No</th>
