@@ -2,24 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div class="container">
-    <a href="main.php" class="back"></a>
-    <div class="dropdown2">
-        <button class="dropbtn">Menu
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="main.php">Klub</a>
-            <a href="c_jadwal.php">Jadwal</a>
-            <a href="c_pertandingan.php">Pertandingan</a>
-        </div>
-    </div>
-    <p class="login-text" style="font-size: 2rem; font-weight: 800;">Klasemen Liga PW</p>
-    <p class="login-text" style="font-size: 1.5rem; font-weight: 800;">Juara grup : <?php echo $klasemen[0]["nama"]?></p>
+<div class="container3">
+        <div class="images">
+			<img src="1.png" class = "ball">
+		</div>
+    <h1>Klasemen Liga PW</h1>
+    <h2>Juara grup : <?php echo $klasemen[0]["nama"]?></h2>
 <table id="klasemen">
     <thead>
     <tr>
@@ -30,7 +21,7 @@
         <th>Kalah</th>
         <th>Seri</th>
         <th>Gol Cetak</th>
-        <th>Gol Masuk</th>
+        <th>Gol Kemasukan</th>
         <th>Selisih Gol</th>
     </tr>
     </thead>
@@ -49,7 +40,8 @@
     ?>
     </tbody>
 </table>
-
+    <a href="main.php" class="button1"> Home</a>
+    <a href="c_jadwal.php" class="button"> Lihat Jadwal</a>
 </div>
 </body>
 </html>

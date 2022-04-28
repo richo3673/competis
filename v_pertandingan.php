@@ -13,12 +13,12 @@
         </button>
         <div class="dropdown-content">
             <a href="main.php">Klub</a>
-            <a href="c_jadwal.php">Jadwal</a>
+            <a href="v_jadwal.php">Jadwal</a>
             <a href="c_klasemen.php">Klasemen</a>
         </div>
     </div>
-    <p class="login-text" style="font-size: 2rem; font-weight: 800;">Riwayat Pertandingan</p>
-    <div style="width: 55%; float:left">
+    <h1>Riwayat Pertandingan</h1>
+         <div class="tablecon">
         <table id="customers">
             <thead>
             <tr>
