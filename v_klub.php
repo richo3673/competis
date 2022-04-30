@@ -11,7 +11,7 @@
         <img src="assets/1.png" class="ball">
     </div>
     <div class="dropdown">
-        <button class="dropbtn">Menu<i class="fa fa-caret-down"></i>
+        <button class="dropbtn">Menu
         </button>
         <div class="dropdown-content">
             <a href="c_jadwal.php">Jadwal</a>

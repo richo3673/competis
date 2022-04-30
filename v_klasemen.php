@@ -20,8 +20,7 @@
         </div>
     </div>
     <p class="header">Klasemen Liga PW</p>
-    <p style="font-size: 1.5rem; font-weight: 800;text-align: center;">Juara grup
-        : <?php echo $klasemen[0]["nama"] ?></p>
+    <p style="font-size: 1.5rem; font-weight: 800;text-align: center;">Juara grup : <?php echo $klasemen[0]["nama"] ?></p>
     <table id="klasemen">
         <thead>
         <tr>

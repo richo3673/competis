@@ -9,7 +9,6 @@
     <a href="c_jadwal.php" class="back"></a>
     <div class="dropdown">
         <button class="dropbtn">Menu
-            <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
             <a href="index.php">Klub</a>
@@ -83,7 +82,6 @@
                 } ?>' required>
             </div>
             <div style="width: 45%; float:right;">
-
                 Klub 2 :<input type='text' name='klub2' value='<?php
                 if (isset($pertandinganid[0]["klub2"])) {
                     echo $pertandinganid[0]["klub2"];
