@@ -7,19 +7,19 @@
 <body>
 <div class="container">
     <a href="c_jadwal.php" class="back"></a>
-    <div class="dropdown2">
+    <div class="dropdown">
         <button class="dropbtn">Menu
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="main.php">Klub</a>
+            <a href="index.php">Klub</a>
             <a href="c_jadwal.php">Jadwal</a>
             <a href="c_klasemen.php">Klasemen</a>
         </div>
     </div>
-    <p class="login-text" style="font-size: 2rem; font-weight: 800;text-align: center;">Riwayat Pertandingan</p>
+    <p class="header">Riwayat Pertandingan</p>
     <div style="width: 55%; float:left">
-        <table id="klub">
+        <table id="list">
             <thead>
             <tr>
                 <th>Klub 1</th>
@@ -48,55 +48,54 @@
             </tbody>
         </table>
     </div>
-    <div style="width: 37%; float:right; margin-top:-10px">
-        <form action="c_pertandingan.php" method="post" class="login-email">
+    <div style="width: 34%; float:right; margin-top:-10px">
+        <form action="c_pertandingan.php" method="post" class="inputan">
             <div class="input-group">
                 <h2>Input skor</h2>
-                <select name="klub" id="klub" class="button2">
-                    <option disabled selected> Pilih pertandingan</option>
+                <select name="klub" id="klub" required>
+                    <option value="">Pilih pertandingan</option>
                     <?php
                     global $mysqli;
                     $rs = $mysqli->query("SELECT * FROM jadwal WHERE skor1 IS NULL");
                     while ($row = mysqli_fetch_array($rs)) {
                         ?>
-                        <option value="<?= $row[5] ?>"><?= $row[0], ' vs ', $row[1], ' | ', $row[2], ' | ID=', $row[5] ?></option>
+                        <option value="<?= $row[5] ?>"><?= $row[0], ' vs ', $row[1], ' | ', $row[2], ' | ID=', $row[5] ?> </option>
                         <?php
                     }
                     ?>
+
                 </select>
                 <input type="submit" name="simpan" value="Simpan" class="btn2">
         </form>
-            <form action="c_pertandingan.php" method="post" name="update">
-                Match ID : <input type='text' name='id' value='<?php
-                if (isset($pertandinganid[0]["id_pertandingan"])) {
-                    echo $pertandinganid[0]["id_pertandingan"];
-                } ?>' Readonly><br>
-                <div style="width: 45%; float:left">
-                    Klub 1 : <input type='text' name='klub1' value='<?php
-                    if (isset($pertandinganid[0]["klub1"])) {
-                        echo $pertandinganid[0]["klub1"];
-                    } ?>' Readonly>
-                    Skor 1 :<input type='text' name='skor1' value='<?php
-                    if (isset($pertandinganid[0]["skor1"])) {
-                        echo $pertandinganid[0]["skor1"];
-                    } ?>'>
-                </div>
-                <div style="width: 45%; float:right;">
+        <form action="c_pertandingan.php" method="post" name="update">
+            Match ID : <input type='text' name='id' value='<?php
+            if (isset($pertandinganid[0]["id_pertandingan"])) {
+                echo $pertandinganid[0]["id_pertandingan"];
+            } ?>' Readonly><br>
+            <div style="width: 45%; float:left">
+                Klub 1 : <input type='text' name='klub1' value='<?php
+                if (isset($pertandinganid[0]["klub1"])) {
+                    echo $pertandinganid[0]["klub1"];
+                } ?>' Readonly>
+                Skor 1 :<input type='text' name='skor1' value='<?php
+                if (isset($pertandinganid[0]["skor1"])) {
+                    echo $pertandinganid[0]["skor1"];
+                } ?>' required>
+            </div>
+            <div style="width: 45%; float:right;">
 
-                    Klub 2 :<input type='text' name='klub2' value='<?php
-                    if (isset($pertandinganid[0]["klub2"])) {
-                        echo $pertandinganid[0]["klub2"];
-                    } ?>' Readonly><br>
-                    Skor 2 :<input type='text' name='skor2' value='<?php
-                    if (isset($pertandinganid[0]["skor2"])) {
-                        echo $pertandinganid[0]["skor2"];
-                    } ?>'
-                    ><br>
-                </div>
-                <input type="submit" name="update" value="Update" class="btn2">
-            </form>
+                Klub 2 :<input type='text' name='klub2' value='<?php
+                if (isset($pertandinganid[0]["klub2"])) {
+                    echo $pertandinganid[0]["klub2"];
+                } ?>' Readonly><br>
+                Skor 2 :<input type='text' name='skor2' value='<?php
+                if (isset($pertandinganid[0]["skor2"])) {
+                    echo $pertandinganid[0]["skor2"];
+                } ?>'
+                required><br>
+            </div>
+            <input type="submit" name="update" value="Update" class="btn2">
+        </form>
     </div>
-</div>
-</div>
 </body>
 </html>

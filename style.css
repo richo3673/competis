@@ -3,7 +3,7 @@
 * {
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins'   
+    font-family: 'Poppins'
 }
 
 body {
@@ -14,9 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("background.jpg");
+    background-image: url("assets/background.jpg");
 }
-
 
 table {
     border-radius: 25px;
@@ -24,31 +23,71 @@ table {
     text-align: center;
 }
 
+select {
+    width: 100%;
+    background-color: #3b9272;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 7px 12px;
+    border-radius: 30px;
+    transition: 0.4s;
+    margin-left: 0px;
+}
+
+
 /* for V-klub  */
+
+#list {
+    border-collapse: collapse;
+    border-radius: 1em;
+    width: 600px;
+    margin: 17px 0px 25px 25px;
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+#list td, #list th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#list tr:nth-child(even) {
+    background-color: rgba(175, 206, 198, 0.26);
+}
+
+#list th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #3b9272;
+    color: white;
+}
 
 .container {
     width: 1100px;
     min-height: 575px;
     background: rgba(255, 255, 255, 0.94);
     border-radius: 25px;
-    box-shadow: 0 0 0px rgba(0,0,0,.3);
+    box-shadow: 0 0 0px rgba(0, 0, 0, .3);
     padding: 10px 30px;
     margin-top: 30px;
 }
 
-.container .tablecon{
-    width: 55%; 
-    float: left;  
+.container .tablecon {
+    width: 55%;
+    float: left;
 }
 
-.container h1{
-    font-size: 1.8rem; 
+
+.container h1 {
+    font-size: 1.8rem;
     text-align: left;
     margin-left: 170px;
-    font-weight: 800;  
+    font-weight: 800;
 }
 
- .container .images .ball{
+.container .images .ball {
     opacity: 0.2;
     width: 300px;
     height: auto;
@@ -58,60 +97,38 @@ table {
     bottom: -100px;
 
 }
-    #klub {
-    border-collapse: collapse;
-    border-radius: 1em;
-    width: 600px;
-    margin: 17px 0px 25px 25px;
-    background-color: rgba(255, 255, 255, 0.26);}
 
-    #klub td, #klub th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-    #klub tr:nth-child(even){
-    background-color: rgba(175, 206, 198, 0.26);}
-
-    #klub th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #3b9272;
-    color: white;
-}
-
-.container .inputan{
-    width: 33%;
-    float:right; 
+.container .inputan {
+    width: 100%;
+    float: right;
     margin-top: 30px
 }
 
-.container .inputan .input-group h2{
+.container .inputan .input-group h2 {
     text-align: center;
 }
 
-.container .login-email .input-group {
+.container .inputan .input-group {
     width: 300px;
     height: 30px;
 }
 
-.container .login-email .input-group input {
+.container .inputan .input-group input {
     width: 100%;
     height: 100%;
     border: 2px solid #000000;
     padding: 15px 20px;
-    border-radius:  20px;
+    border-radius: 20px;
     background: transparent;
     outline: none;
     transition: .3s;
 }
 
-.container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
+.container .inputan .input-group input:focus, .container .inputan .input-group input:valid {
     border-color: #3b9272;
 }
 
-.container .login-email .input-group .btn {
+.container .inputan .input-group .btn {
     display: block;
     margin-top: 30px;
     width: 100px;
@@ -122,12 +139,14 @@ table {
     background: #3b9272;
     outline: none;
     border-radius: 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #FFF;
     cursor: pointer;
     transition: .3s;
+    font-weight: bold;
 }
-.container .login-email .input-group .btn2 {
+
+.container .inputan .input-group .btn2 {
     margin: 7px 0px 12px 0px;
     width: 100px;
     height: 35px;
@@ -143,20 +162,25 @@ table {
     cursor: pointer;
     transition: .3s;
 }
-
-.container .login-email .input-group .btn:hover {
-    transform: scale(1.1);
-    background: #6c5ce7;
+.container .inputan .input-group .btn2:hover {
+    transform: scale(1.05);
 }
 
+.container .inputan .input-group .btn:hover {
+    transform: scale(1.05);
+}
+
+.header{
+    font-size: 2rem; font-weight: 800;text-align: center;margin-top: 22px;
+}
 .dropdown {
     border-radius: 20px;
     width: 90px;
     height: 40px;
-    margin: 28px 43px  0px 0px;
+    font-weight: bold;
+    margin: 28px 0px 0px 0px;
     float: right;
     overflow: hidden;
-    font-weight: bold;
     background-color: #3b9272;
     overflow: hidden;
 }
@@ -165,13 +189,12 @@ table {
     border-radius: 20px;
     font-size: 1.1rem;
     border: none;
+    font-weight: bold;
     outline: none;
     color: white;
-    font-weight: bold;
     padding: 7px 20px;
     background-color: inherit;
     margin: 0;
-    cursor: pointer;
 }
 
 .dropdown-content {
@@ -194,6 +217,7 @@ table {
 
 .dropdown-content a:hover {
     background-color: #ddd;
+
 }
 
 .dropdown:hover .dropdown-content {
@@ -207,15 +231,17 @@ table {
     border-radius: 1em;
     width: 1000px;
     margin: 17px 0px 25px 25px;
-    background-color: rgba(255, 255, 255, 0.26);}
+    background-color: rgba(255, 255, 255, 0.26);
+}
 
 #klasemen td, #klasemen th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#klasemen tr:nth-child(even){
-    background-color: rgba(175, 206, 198, 0.26);}
+#klasemen tr:nth-child(even) {
+    background-color: rgba(175, 206, 198, 0.26);
+}
 
 #klasemen th {
     padding-top: 12px;
@@ -225,111 +251,11 @@ table {
     color: white;
 }
 
-.container3 {
-    display: inline-block;
-    width: 900px;
-    margin-left: 30px;
-    min-height: 510px;
-    background: rgba(255, 255, 255, 0.87);
-    border-radius: 25px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
-    padding: 5px 30px;
-}
-
-.button {
-    background-color: #3b9272;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 7px 12px;
-    border-radius: 30px;
-    transition: 0.4s;
-    margin-left: 10px;
-}
-
-.button1 {
-    background-color: #6c5ce7;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 7px 12px;
-    border-radius: 30px;
-    transition: 0.4s;
-    position: absolute;
-    top: 150px;
-    left :1100px;
-}
-
-.button:hover {
-    background-color: transparent;
-    border: 2px solid #3b9272;
-    cursor: pointer;
-    color: rgb(59, 146, 114);
-    padding: 7px 12px;
-}
-
-.button1:hover {
-    background-color: transparent;
-    border: 2px solid #6c5ce7;
-    cursor: pointer;
-    color: #6c5ce7;
-    padding: 7px 12px;
-}
-
-.container3 h1{
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    margin-top: 30px;
-}
-
-
-.container3 h2{
-    font-size: rem;
-     font-weight: 800;
-     text-transform: uppercase;
-     margin-left: 20px;
-}
-
-
-.container3 .images .ball{
-    opacity: 0.2;
-    width: 300px;
-    height: auto;
-    background-size: cover;
-    position: absolute;
-    left: 74%;
-    bottom: -110px;
-}
-
-
-/* FOR JADWAL  */
-
-.container .jadwal{
-    font-size: 2rem; 
-    font-weight: 800;
-    text-align: center;
-}
-
-.button2 {
-    background-color: #3b9272;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 7px 12px;
-    border-radius: 30px;
-    transition: 0.4s;
-    margin-left: 0px;
-}
-
 .back {
     border-radius: 20px;
     width: 65px;
     height: 40px;
-    margin: 28px 0px  0px 25px;
+    margin: 28px 0px 0px 25px;
     float: left;
     overflow: hidden;
     background-color: rgb(59, 146, 114);
@@ -337,49 +263,13 @@ table {
     background-size: 20px;
     background-position: center;
     background-repeat: no-repeat;
-    }
-/* =
-for klasemen  */
-
-.container .text1 {
-    font-size: 2rem; 
-    font-weight: 800;
-    text-align: center;
-}
-
-.container .text {
-    font-size: 1.5rem; 
-    font-weight: 800;
-    text-align: center;
 }
 
 
 /* dropdown for jadwal and pertandingan  */
 
-.dropdown2 {
-    border-radius: 20px;
-    width: 90px;
-    height: 40px;
-    font-weight: bold;
-    margin: 28px 0px  0px 0px;
-    float: right;
-    overflow: hidden;
-    background-color: #3b9272;
-    overflow: hidden;
-}
-.dropdown2 .dropbtn {
-    border-radius: 20px;
-    font-size: 1.1rem;
-    border: none;
-    font-weight: bold;
-    outline: none;
-    color: white;
-    padding: 7px 20px;
-    background-color: inherit;
-    margin: 0;
-}
 
-.dropdown2:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 

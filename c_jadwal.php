@@ -6,32 +6,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $klub1 = $_REQUEST['klub1'];
         $klub2 = $_REQUEST['klub2'];
         $tanggal = $_REQUEST['tanggal'];
-        $jadwal = new c_jadwal($klub1, $klub2,$tanggal);
+        $jadwal = new c_jadwal($klub1, $klub2, $tanggal);
         $jadwal->addJadwal();
-    }else{
+        //header('Location:c_jadwal.php');
+    } else {
         header('Location:c_jadwal.php');
     }
-    
-}else{
-    $jadwal  = new c_jadwal(null,null,null,null);
+} else {
+    $jadwal = new c_jadwal(null, null, null, null);
     $jadwal->getJadwal();
 }
 
 
-class c_jadwal{
+class c_jadwal
+{
     public $model;
 
-    public function __construct($klub1, $klub2,$tanggal){
-        $this->model = new m_jadwal($klub1, $klub2,$tanggal);
+    public function __construct($klub1, $klub2, $tanggal)
+    {
+        $this->model = new m_jadwal($klub1, $klub2, $tanggal);
     }
 
-    public function addJadwal(){
+    public function addJadwal()
+    {
         $jadwal = $this->model->addJadwal();
+        $jadwal = $this->model->getJadwal();
+        //include "v_jadwal.php";
         header('Location:c_jadwal.php');
     }
-    public function getJadwal(){
+
+    public function getJadwal()
+    {
         $jadwal = $this->model->getJadwal();
         include "v_jadwal.php";
     }
 
+    public function getNamaKlub()
+    {
+        $klub = $this->model->getNamaKlub();
+        return $klub;
+    }
 }

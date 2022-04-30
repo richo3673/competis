@@ -1,6 +1,8 @@
 <?php
 require "koneksi.php";
-class m_klub {
+
+class m_klub
+{
     private $nama;
     private $stadion;
     private $manager;
@@ -8,7 +10,7 @@ class m_klub {
     public $res = array();
 
 
-    public function __construct($nama, $stadion, $manager,$poin)
+    public function __construct($nama, $stadion, $manager, $poin)
     {
         $this->nama = $nama;
         $this->stadion = $stadion;
@@ -17,14 +19,16 @@ class m_klub {
 
     }
 
-    public function setKlub(){
+    public function setKlub()
+    {
         global $mysqli;
-        if (isset($this->nama)){
+        if (isset($this->nama)) {
             $mysqli->query("INSERT INTO klub (nama, stadion,manager,poin) VALUES ('$this->nama','$this->stadion','$this->manager','$this->poin')");
         }
     }
 
-    public function getKlub(){
+    public function getKlub()
+    {
         global $mysqli;
         $rs = $mysqli->query("SELECT * FROM klub");
         $rows = array();
@@ -35,11 +39,12 @@ class m_klub {
         return $this->res;
     }
 
-    public function klubExist($name):bool{
+    public function klubExist($name): bool
+    {
         global $mysqli;
         $q = "SELECT * FROM klub WHERE nama = '$name'";
         $rs = $mysqli->query($q);
-        if($rs->num_rows!=0){
+        if ($rs->num_rows != 0) {
             return true;
         }
         return false;
